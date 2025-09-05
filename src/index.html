@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet" >
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap');
+      body{
+        font-family: 'Quicksand';
+      }
+      #landing-page{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contain{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+body.angry{
+  background: linear-gradient(#FD8D58, #DC611E);
+}
+body.confuse{
+  background: linear-gradient(#FEA954, #DA7315);
+}
+body.like{
+  background: linear-gradient(#FED151, #DE981F);
+}
+.wrapper{
+  background: #f6f6f6;
+  padding: 30px 40px 40px;
+  border-radius: 10px;
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+.wrapper .section{
+  height: 140px;
+  width: 140px;
+  overflow: hidden;
+}
+.wrapper .section .emojis{
+  height: 500%;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .section li{
+  height: 20%;
+  width: 100%;
+  list-style: none;
+  transition: all 0.3s ease;
+}
+.section li img{
+  height: 100%;
+  width: 100%;
+}
+.wrapper .slider{
+  margin-top: 40px;
+  height: 12px;
+  width: 100%;
+  position: relative;
+  background: #d9d9d9;
+  border-radius: 50px;
+}
+.slider input{
+  height: 100%;
+  width: 100%;
+  -webkit-appearance: none;
+  position: absolute;
+  background: none;
+  outline: none;
+  top: 0;
+  z-index: 2;
+}
+.slider input::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  background: none;
+  cursor: pointer;
+}
+.slider .progress-bar{
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(45deg,#FD8D58, #DC611E);
+  border-radius: 50px;
+  position: relative;
+}
+body.angry .progress-bar{
+  background: linear-gradient(45deg,#FD8D58, #DC611E);
+}
+body.confuse .progress-bar{
+  background: linear-gradient(45deg,#FEA954, #DA7315);
+}
+body.like .progress-bar{
+  background: linear-gradient(45deg,#FED151, #DE981F);
+}
+.slider .thumb{
+  height: 25px;
+  width: 25px;
+  background: #DC611E;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  padding: 2px;
+}
+body.angry .thumb{
+  background: #DC611E;
+}
+body.confuse .thumb{
+  background: #DA7315;
+}
+body.like .thumb{
+  background: #DE981F;
+}
+.slider .thumb span{
+  height: 100%;
+  width: 100%;
+  border: 2px solid #f6f6f6;
+  border-radius: 50%;
+  background: linear-gradient(#FD8D58, #DC611E);
+  display: block;
+}
+body.angry .thumb span{
+  background: linear-gradient(#FD8D58, #DC611E);
+}
+body.confuse .thumb span{
+  background: linear-gradient(#FEA954, #DA7315);
+}
+body.like .thumb span{
+  background: linear-gradient(#FED151, #DE981F);
+}
+.wrap-calm{
+  background: linear-gradient(180deg, #daabbe 0%, rgba(255, 255, 255, 0) 100%, #f0dde5 100%);
+}
+.start-calm{
+  background: linear-gradient(180deg, #e2bdcd 0%, #fffbfc 100%);
+}
+    </style>
+</head>
+<body style="background: linear-gradient(to bottom right, #f9d4f4, #c5eee2);">
+    <header>
+      <nav class="flex md:justify-around justify-between items-center w-[92%] mx-auto mt-3">
+        <div class="md:text-2xl">
+          <a href="#" class="font-semibold">EUNOIA</a>
+        </div>
+        <div
+          class="nav-links duration-500 md:static absolute md:bg-transparent bg-[#e8ddc7]/20 backdrop-blur-sm md:min-h-fit min-h-[90vh] left-0 top-[-100%] md:w-auto w-full flex items-center justify-center px-5 z-50"
+        >
+          <ul
+            class="flex md:flex-row flex-col md:items-center items-center md:gap-[4vw] gap-8 text-[#000000] font-semibold" style="font-family: 'Quicksand';"
+          >
+            <li><a href="#home">Home</a></li>
+            <li><a href="#calm">Calm</a></li>
+            <li><a href="#Articles">Articles</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="https://wa.me/+6289521450827" target="_blank">
+            <button class="btn bg-transparent shadow-[3px_3px_6px_0px_rgba(0,_0,_0,_0.8)] font-bold rounded-full md:px-5 md:py-2 px-4 py-1 text-[12px] text-[#FF95AE]">
+              <p>Get Help</p>
+            </button>
+          </a>
+        <ion-icon onclick="onToggelMenu(this)" name="menu-outline" class="text-3xl cursor-pointer md:hidden z-50"></ion-icon>
+        </div>
+      </nav>
+    </header>
+    <section id="home" class="h-[100vh] flex flex-col items-center justify-start md:justify-center w-[100%] gap-6">
+      <div class="flex items-center font-bold text-[#333333] h-56 gap-4 md:h-25">
+        <p class="text-4xl md:text-6xl">Mental</p>
+        <div class="text-2xl md:text-4xl">
+          <p>Health</p>
+          <p>Wealth</p>
+        </div>
+        <p class="text-4xl md:text-6xl">is</p>
+      </div>
+      <div class="">
+        <img src="img/wmn.png" alt="" class="">
+      </div>
+    </section>
+
+    <section id="mood" class="bg-white">
+      <div class="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#F9D4F4" />
+                <stop offset="100%" stop-color="#C5EEE2" />
+              </linearGradient>
+            </defs>
+            <path
+              fill="url(#gradient)"
+              fill-opacity="1"
+              d="M0,128L80,133.3C160,139,320,149,
+                480,138.7C640,128,800,96,960,80C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,
+                0L0,0Z"
+            ></path>
+          </svg>
+      </div>
+      <div class="mt-35 md:mt-0" id="landing-page">
+        <div class="text-lg text-center font-semibold">
+          <p class="text-2xl font-bold">How's Your Mood Today?</p>
+        </div>
+        <div class="contain">
+          <div class="wrapper">
+            <div class="section">
+              <ul class="emojis">
+                <li class="slide-emoji"><img src="img/happy.png" alt=""></li>
+                <li><img src="img/good.png" alt=""></li>
+                <li><img src="img/bad.png" alt=""></li>
+                <li><img src="img/happy.png" alt=""></li>
+                <li><img src="img/good.png" alt=""></li>
+              </ul>
+            </div>
+            <div class="slider">
+              <div class="thumb"><span></span></div>
+              <div class="progress-bar"></div>
+              <input type="range" min="0" value="0" max="100">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center justify-center md:justify-evenly gap-9 mt-25">
+        <div class="">
+          <p class="text-3xl font-bold">Can We Know <span class="font-['Seaweed_Script'] font-light">Why</span>?</p>
+        </div>
+        <div class="flex flex-col justify-center">
+          <img src="img/klip.png" alt="" class="w-[250px] h-[200px] absolute">
+          <textarea name="" id="note" placeholder="Type here..." class="bg-[linear-gradient(#D72F6B3D,#FFA9C83D)] rounded-[20px] border-transparent outline-none p-[1em] resize-none w-[200px] h-[180px] z-1"></textarea>
+        </div>
+      </div>
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <defs>
+          <linearGradient
+            id="gradien"
+            x1="100%"
+            y1="0%"
+            x2="0%"
+            y2="00%"
+          >
+          <stop offset="0%" stop-color="#C5EEE2" />
+          <stop offset="100%" stop-color="#F9D4F4" />
+          </linearGradient>
+        </defs>
+            <path
+              fill="url(#gradien)"
+              fill-opacity="1"
+              d="M0,224L80,229.3C160,235,320,245,480,229.3C640,213,800,171,
+                    960,165.3C1120,160,1280,192,1360,208L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,
+                    640,320,480,320C320,320,160,320,80,320L0,320Z"
+            />
+          </svg>
+    </section>
+
+    <section id="" class="h-[80vh] md:h-[100vh]">
+      <div class="flex justify-center items-center relative">
+        <div class="wrap-calm text-center absolute rounded-[28px] border border-transparent shadow-[0px_4px_4px_0px rgba(0,_0,_0,_0.25)] z-1 bottom-[-350px] md:left-[350px] md:bottom-[-400px]">
+          <div class="w-[200px] h-[240px] flex flex-col items-center justify-end md:justify-center">
+            <img src="img/cw.png" alt="" class="w-[180px] h-[200px]">
+            <p class="font-medium text-xl md:hidden">Say Hello to</p>
+          </div>
+        </div>
+        <div class="start-calm flex justify-center items-center rounded-[15px] border border-transparent backdrop-blur-md w-69 h-57 md:w-[850px] absolute bottom-[-490px]">
+          <div class="text-center self-end pb-5 md:self-auto md:text-start">
+            <p class="hidden md:block md:text-3xl md:font-semibold">Say Hello to</p>
+            <p class="font-['Seaweed_Script'] font-medium text-5xl">Eunoia</p>
+            <p>let's heal together and be better</p>
+            <a href="">
+              <button class="btn rounded-lg bg-white hover:bg-[#E4EEEC] px-5 py-2 font-semibold shadow-[3px_3px_6px_0px_rgba(0,_0,_0,_0.5)]">
+                <p class="text-[10px] md:text-[12px]">Let's Start</p>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="">
+        <img src="img/cloud.png" alt="">
+      </div>
+    </section>
+
+
+
+
+
+
+    <script>
+      const navLinks = document.querySelector('.nav-links')
+
+      function onToggelMenu(e){
+        e.name = e.name === 'menu-outline' ? 'close' : 'menu-outline'
+        navLinks.classList.toggle('top-[0%]')
+      }
+
+    </script>
+
+    <script>
+    const body = document.querySelector("body");
+    const emoji = document.querySelector(".slide-emoji");
+    const input = document.querySelector("input");
+    const bar = document.querySelector(".progress-bar");
+    const thumb = document.querySelector(".thumb");
+    input.oninput = ()=>{
+      let sliderValue = input.value;
+      thumb.style.left = sliderValue + '%';
+      bar.style.width = sliderValue + '%';
+      if(sliderValue < 20){
+        emoji.style.marginTop = "0px";
+        body.classList.add("angry");
+        body.classList.remove("confuse");
+        body.classList.remove("like");
+      }
+      if(sliderValue >= 20){
+        emoji.style.marginTop = "-140px";
+        body.classList.add("confuse");
+        body.classList.remove("angry");
+        body.classList.remove("like");
+      }
+      if(sliderValue >= 40){
+        emoji.style.marginTop = "-280px";
+      }
+      if(sliderValue >= 60){
+        emoji.style.marginTop = "-420px";
+        body.classList.add("like");
+        body.classList.remove("confuse");
+        body.classList.remove("angry");
+      }
+      if(sliderValue >= 80){
+        emoji.style.marginTop = "-560px";
+      }
+    }
+  </script>
+</body>
+</html>

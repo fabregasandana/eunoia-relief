@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet" >
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+      body{
+        font-family: 'Quicksand';
+      }
+    </style>
+</head>
+<body style="background: linear-gradient(to bottom right, #f9d4f4, #c5eee2);">
+    <header>
+      <nav class="flex md:justify-around justify-between items-center w-[92%] mx-auto mt-3">
+        <div class="md:text-2xl">
+          <a href="#" class="font-semibold">EUNOIA</a>
+        </div>
+        <div
+          class="nav-links duration-500 md:static absolute md:bg-transparent bg-[#e8ddc7]/20 backdrop-blur-sm md:min-h-fit min-h-[90vh] left-0 top-[-100%] md:w-auto w-full flex items-center justify-center px-5 z-50"
+        >
+          <ul
+            class="flex md:flex-row flex-col md:items-center items-center md:gap-[4vw] gap-8 text-[#000000] font-semibold" style="font-family: 'Quicksand';"
+          >
+            <li><a href="#home">Home</a></li>
+            <li><a href="#calm">Calm</a></li>
+            <li><a href="#Articles">Articles</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="https://wa.me/+6289521450827" target="_blank">
+            <button class="btn bg-transparent shadow-[3px_3px_6px_0px_rgba(0,_0,_0,_0.8)] font-bold rounded-full md:px-5 md:py-2 px-4 py-1 text-[12px] text-[#FF95AE]">
+              <p>Get Help</p>
+            </button>
+          </a>
+        <ion-icon onclick="onToggelMenu(this)" name="menu-outline" class="text-3xl cursor-pointer md:hidden z-50"></ion-icon>
+        </div>
+      </nav>
+    </header>
+    <section id="home" class="h-[100vh] flex flex-col items-center justify-start md:justify-center w-[100%] gap-6">
+      <div class="flex items-center font-bold text-[#333333] h-56 gap-4 md:h-25">
+        <p class="text-4xl md:text-6xl">Mental</p>
+        <div class="text-2xl md:text-4xl">
+          <p>Health</p>
+          <p>Wealth</p>
+        </div>
+        <p class="text-4xl md:text-6xl">is</p>
+      </div>
+      <div class="">
+        <img src="/src/img/women.png" alt="" class="">
+      </div>
+    </section>
+
+    <section id="mood" class="bg-white">
+      <div class="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#F9D4F4" />
+                <stop offset="100%" stop-color="#C5EEE2" />
+              </linearGradient>
+            </defs>
+            <path
+              fill="url(#gradient)"
+              fill-opacity="1"
+              d="M0,128L80,133.3C160,139,320,149,
+                480,138.7C640,128,800,96,960,80C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,
+                0L0,0Z"
+            ></path>
+          </svg>
+      </div>
+      <div class="text-lg text-center font-semibold">
+        <p>How's Your Mood Today?</p>
+      </div>
+      <div class="flex items-center justify-center p-[20px]">
+        <div class="wrapper bg-[#f6f6f6] pt-[30px] px-[40px] pb-[40px] rounded-[10px] max-w-[350px] w-100% flex flex-col items-center shadow-[0px_10px_15px_rgba(0,_0,_0,_0.3)]">
+          <div class="section h-[140px] w-[140px] overflow-hidden">
+            <ul class="emojis h-[500%] flex flex-row">
+              <li class="slide-emoji h-[20%] w-full list-none transition-all duration-300 ease-in-out"><img src="img/happy.png" alt="" class="h-full w-[140px]"></li>
+              <li class="h-[20%] w-full list-none transition-all duration-300 ease-in-out"><img src="img/good.png" alt="" class="h-full w-[140px]"></li>
+              <li class="h-[20%] w-full list-none transition-all duration-300 ease-in-out"><img src="img/bad.png" alt="" class="h-full w-[140px]"></li>
+              <li class="h-[20%] w-full list-none transition-all duration-300 ease-in-out"><img src="img/happy.png" alt="" class="h-full w-[140px]"></li>
+              <li class="h-[20%] w-full list-none transition-all duration-300 ease-in-out"><img src="img/good.png" alt="" class="h-full w-[140px]"></li>
+            </ul>
+          </div>
+          <div class="slider mt-[40px] h-[12px] w-[100%] relative bg-[#d9d9d9] roudned-[50px]">
+            <div class="thumb h-[25px] w-[25px] bg-[#dc611e] rounded-[50%] absolute top-[50%] left-0 transform translate-x-1/2 translate-y-1/2 z-1 p-[2px]"><span class="h-[100%] w-[100%] border-2 border-[#f6f6f6] rounded-[50%] block" style="background: linear-gradient(#fd8d58, #dc611e);"></span></div>
+            <div class="progress-bar"></div>
+            <input type="range" min="0" value="0" max="100" class="h-[100%] w-[100%] appearance-none absolute bg-none outline-none top-0 z-2">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <script>
+      const navLinks = document.querySelector('.nav-links')
+
+      function onToggelMenu(e){
+        e.name = e.name === 'menu-outline' ? 'close' : 'menu-outline'
+        navLinks.classList.toggle('top-[0%]')
+      }
+
+    </script>
+</body>
+</html>
