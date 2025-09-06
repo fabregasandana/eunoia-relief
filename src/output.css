@@ -10,8 +10,6 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
-    --text-sm: 0.875rem;
-    --text-sm--line-height: calc(1.25 / 0.875);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
@@ -30,13 +28,10 @@
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
-    --radius-sm: 0.25rem;
     --radius-lg: 0.5rem;
-    --radius-xl: 0.75rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --blur-sm: 8px;
     --blur-md: 12px;
-    --blur-2xl: 40px;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -213,9 +208,6 @@
   .bottom-\[-350px\] {
     bottom: -350px;
   }
-  .bottom-\[-470px\] {
-    bottom: -470px;
-  }
   .bottom-\[-490px\] {
     bottom: -490px;
   }
@@ -255,15 +247,6 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
-  .h-50 {
-    height: calc(var(--spacing) * 50);
-  }
-  .h-52 {
-    height: calc(var(--spacing) * 52);
-  }
   .h-56 {
     height: calc(var(--spacing) * 56);
   }
@@ -297,14 +280,8 @@
   .h-\[200px\] {
     height: 200px;
   }
-  .h-\[220px\] {
-    height: 220px;
-  }
   .h-\[240px\] {
     height: 240px;
-  }
-  .h-\[260px\] {
-    height: 260px;
   }
   .h-\[500\%\] {
     height: 500%;
@@ -345,19 +322,11 @@
   .max-w-\[350px\] {
     max-width: 350px;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .translate-x-1 {
-    --tw-translate-x: calc(var(--spacing) * 1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
+  .flex-shrink {
+    flex-shrink: 1;
   }
   .translate-x-1\/2 {
     --tw-translate-x: calc(1/2 * 100%);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-y-1 {
-    --tw-translate-y: calc(var(--spacing) * 1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .translate-y-1\/2 {
@@ -369,9 +338,6 @@
   }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .resize-none {
     resize: none;
@@ -390,9 +356,6 @@
   }
   .items-center {
     align-items: center;
-  }
-  .items-start {
-    align-items: flex-start;
   }
   .justify-between {
     justify-content: space-between;
@@ -456,14 +419,8 @@
   .border-\[\#f6f6f6\] {
     border-color: #f6f6f6;
   }
-  .border-\[\#fff\] {
-    border-color: #fff;
-  }
   .border-transparent {
     border-color: transparent;
-  }
-  .bg-\[\#E4EEEC\] {
-    background-color: #E4EEEC;
   }
   .bg-\[\#d9d9d9\] {
     background-color: #d9d9d9;
@@ -476,9 +433,6 @@
   }
   .bg-\[\#f6f6f6\] {
     background-color: #f6f6f6;
-  }
-  .bg-black {
-    background-color: var(--color-black);
   }
   .bg-transparent {
     background-color: transparent;
@@ -589,9 +543,6 @@
   .text-\[\#FF95AE\] {
     color: #FF95AE;
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .shadow-\[0px_10px_15px_rgba\(0\,_0\,_0\,_0\.3\)\] {
     --tw-shadow: 0px 10px 15px var(--tw-shadow-color, rgba(0, 0, 0, 0.3));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -607,6 +558,9 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .filter {
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .backdrop-blur-md {
     --tw-backdrop-blur: blur(var(--blur-md));
@@ -665,24 +619,9 @@
       bottom: -400px;
     }
   }
-  .md\:left-\[250px\] {
-    @media (width >= 48rem) {
-      left: 250px;
-    }
-  }
-  .md\:left-\[300px\] {
-    @media (width >= 48rem) {
-      left: 300px;
-    }
-  }
   .md\:left-\[350px\] {
     @media (width >= 48rem) {
       left: 350px;
-    }
-  }
-  .md\:left-\[390px\] {
-    @media (width >= 48rem) {
-      left: 390px;
     }
   }
   .md\:mt-0 {
@@ -713,16 +652,6 @@
   .md\:min-h-fit {
     @media (width >= 48rem) {
       min-height: fit-content;
-    }
-  }
-  .md\:w-\[220px\] {
-    @media (width >= 48rem) {
-      width: 220px;
-    }
-  }
-  .md\:w-\[400px\] {
-    @media (width >= 48rem) {
-      width: 400px;
     }
   }
   .md\:w-\[850px\] {
@@ -817,12 +746,6 @@
   .md\:text-\[12px\] {
     @media (width >= 48rem) {
       font-size: 12px;
-    }
-  }
-  .md\:font-bold {
-    @media (width >= 48rem) {
-      --tw-font-weight: var(--font-weight-bold);
-      font-weight: var(--font-weight-bold);
     }
   }
   .md\:font-semibold {
@@ -946,6 +869,59 @@
   inherits: false;
   initial-value: solid;
 }
+@property --tw-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-drop-shadow-size {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-backdrop-blur {
   syntax: "*";
   inherits: false;
@@ -1018,6 +994,19 @@
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
       --tw-outline-style: solid;
+      --tw-blur: initial;
+      --tw-brightness: initial;
+      --tw-contrast: initial;
+      --tw-grayscale: initial;
+      --tw-hue-rotate: initial;
+      --tw-invert: initial;
+      --tw-opacity: initial;
+      --tw-saturate: initial;
+      --tw-sepia: initial;
+      --tw-drop-shadow: initial;
+      --tw-drop-shadow-color: initial;
+      --tw-drop-shadow-alpha: 100%;
+      --tw-drop-shadow-size: initial;
       --tw-backdrop-blur: initial;
       --tw-backdrop-brightness: initial;
       --tw-backdrop-contrast: initial;
